@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MOVEos - Explora Actividades</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="icon" type="image/ico" href="../ico/icono.png" id="icon.ico">
 </head>
+
 <body>
 
-  <!-- Header / Navbar -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">MOVEos</div>
-      <nav class="menu">
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Explorar Actividades</a></li>
-          <li><a href="#">Cómo Funciona</a></li>
-        </ul>
-      </nav>
-      <div class="actions">
+  <!-- Encabezado -->
+  <header>
+    <nav>
+      <div class="logo-container">
+        <a href="#">
+          <img src="../ico/icono.png" alt="Logo MOVEos">
+          <span>MOVEos</span>
+        </a>
+      </div>
+      <ul>
+        <li><a href="landing.html">Inicio</a></li>
+        <li><a href="home.html">Explorar Actividades</a></li>
+        <li><a href="#">Cómo Funciona</a></li>
+      </ul>
+      <div class="icons">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-search"></i>
+        <a href="login.html">
+          <i class="fas fa-user"></i>
+        </a>
         <button class="btn-publicar">Publicar Actividad</button>
       </div>
-    </div>
+    </nav>
   </header>
 
   <!-- Contenido principal -->
@@ -95,10 +109,18 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="columna">
+  <!-- Pie de página -->
+  <footer>
+    <section>
+      <div class="logo-container">
+        <a href="#">
+          <img src="../ico/icono.png" alt="Logo MOVEos">
+          <span>MOVEos</span>
+        </a>
+        <p>Dinamismo, cambio y participación activa en cada experiencia.</p>
+      </div>
+
+      <div>
         <h4>Plataforma</h4>
         <ul>
           <li><a href="#">Explorar</a></li>
@@ -107,16 +129,18 @@
           <li><a href="#">Precios</a></li>
         </ul>
       </div>
-      <div class="columna">
+
+      <div>
         <h4>Soporte</h4>
         <ul>
           <li><a href="#">Centro de Ayuda</a></li>
           <li><a href="#">Contacto</a></li>
-          <li><a href="#">Términos</a></li>
+          <li><a href="#">Condiciones</a></li>
           <li><a href="#">Privacidad</a></li>
         </ul>
       </div>
-      <div class="columna">
+
+      <div>
         <h4>Comunidad</h4>
         <ul>
           <li><a href="#">Blog</a></li>
@@ -125,9 +149,11 @@
           <li><a href="#">Newsletter</a></li>
         </ul>
       </div>
-    </div>
-    <p class="copy">© 2025 MOVEos. Todos los derechos reservados.</p>
+    </section>
+
+    <p>© 2025 MOVEos. Todos los derechos reservados.</p>
   </footer>
 
 </body>
+
 </html>
