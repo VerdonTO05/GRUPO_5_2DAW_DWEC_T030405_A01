@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOVEos - Explora Actividades</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">MOVEos</div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Explorar Actividades</a></li>
+          <li><a href="#">Cómo Funciona</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button class="btn-publicar">Publicar Actividad</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="main-content container">
+    <section class="explorar">
+      <h1>Explora Actividades</h1>
+      <p>Descubre experiencias únicas cerca de ti</p>
+
+      <!-- Filtros -->
+      <div class="filtros">
+        <input type="text" placeholder="Buscar actividades..." />
+        <select>
+          <option>Todas las ubicaciones</option>
+        </select>
+        <button class="btn-filtros">Más Filtros</button>
+      </div>
+
+      <h2>8 actividades encontradas</h2>
+
+      <!-- Grid de actividades -->
+      <div class="grid-actividades">
+
+        <!-- Tarjeta de actividad -->
+        <article class="actividad">
+          <div class="actividad-imagen">
+            <img src="ruta.jpg" alt="Ruta de Senderismo">
+            <span class="etiqueta destacado">Recomendado</span>
+          </div>
+          <div class="actividad-contenido">
+            <h3>Ruta de Senderismo por la Sierra de Guadarrama</h3>
+            <p>Descubre la naturaleza en esta impresionante ruta...</p>
+            <ul class="detalles">
+              <li><i class="icon-fecha"></i> 25 Nov 2025</li>
+              <li><i class="icon-lugar"></i> Madrid</li>
+              <li><i class="icon-personas"></i> 8/10 participantes</li>
+            </ul>
+            <div class="precio">35€</div>
+            <div class="acciones">
+              <button class="btn-detalle">Ver Detalles</button>
+              <button class="btn-inscribirse">Inscribirse</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Puedes duplicar esta estructura para las demás actividades -->
+        <!-- Ejemplo breve -->
+        <article class="actividad">
+          <div class="actividad-imagen">
+            <img src="yoga.jpg" alt="Clase de Yoga para Principiantes">
+            <span class="etiqueta nuevo">Nuevo</span>
+          </div>
+          <div class="actividad-contenido">
+            <h3>Clase de Yoga para Principiantes</h3>
+            <p>Sesión de yoga para principiantes impartida por un instructor...</p>
+            <ul class="detalles">
+              <li>Barcelona</li>
+              <li>15€/persona</li>
+              <li>5 horas</li>
+            </ul>
+            <div class="acciones">
+              <button class="btn-detalle">Ver Detalles</button>
+              <button class="btn-inscribirse">Inscribirse</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ... más tarjetas aquí -->
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columna">
+        <h4>Plataforma</h4>
+        <ul>
+          <li><a href="#">Explorar</a></li>
+          <li><a href="#">Cómo Funciona</a></li>
+          <li><a href="#">Para Organizadores</a></li>
+          <li><a href="#">Precios</a></li>
+        </ul>
+      </div>
+      <div class="columna">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Términos</a></li>
+          <li><a href="#">Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="columna">
+        <h4>Comunidad</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Historias</a></li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2025 MOVEos. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
