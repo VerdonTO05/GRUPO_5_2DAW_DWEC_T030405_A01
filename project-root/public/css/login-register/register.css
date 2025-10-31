@@ -1,0 +1,234 @@
+/* --- Contenido completo para register.css --- */
+
+/* Variables para los colores de la foto */
+:root {
+    --color-fondo-principal: #fef8f8; /* Fondo claro del contenedor */
+    --color-principal: #6c2d3a;      /* Color granate (botones, enlaces) */
+    --color-texto: #333;             /* Color de texto principal */
+    --color-texto-secundario: #666;  /* Color de texto gris (subtítulo) */
+    --color-fondo-tabs: #f3e9ea;     /* Fondo de las pestañas inactivas */
+    --color-borde: #e0e0e0;          /* Borde sutil para inputs y pestañas */
+    --color-blanco: #ffffff;
+}
+
+/* Estilos generales y centrado del contenedor */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Fondo gris claro para la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor del formulario (la "caja" principal) */
+.login-container {
+    background-color: var(--color-fondo-principal);
+    padding: 35px 30px;
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del formulario */
+    position: relative; /* Para posicionar la 'X' */
+    box-sizing: border-box;
+}
+
+/* Botón de cerrar (la X) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--color-texto-secundario);
+}
+
+/* Encabezados y textos descriptivos */
+.login-header h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: var(--color-texto);
+}
+
+.login-header p {
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+    margin-bottom: 25px;
+}
+
+/* Pestañas de alternancia (Iniciar Sesión/Registrarse) */
+.tab-switch {
+    display: flex;
+    background-color: var(--color-fondo-tabs);
+    border-radius: 25px; /* Muy redondeado */
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px; /* Redondeado */
+    background: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--color-texto-secundario);
+}
+
+.tab-btn.active {
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario y etiquetas */
+.register-form label {
+    display: block;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 8px;
+    margin-top: 15px; /* Reducido un poco para ajustar más campos */
+    color: var(--color-texto);
+}
+
+/* Contenedor de input con icono */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-blanco);
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 0 15px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s;
+}
+
+.input-group:focus-within {
+    border-color: var(--color-principal); /* Resaltar al enfocar */
+}
+
+.input-group input {
+    flex-grow: 1;
+    padding: 14px 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: none;
+}
+
+.input-group .icon {
+    color: #999;
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Placeholder (texto "juan@email.com") */
+::placeholder {
+    color: #bbb;
+}
+
+/* Botón principal "Registrarse" */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Espacio antes del botón */
+}
+
+.submit-btn:hover {
+    background-color: #5c2430; /* Tono más oscuro al pasar el ratón */
+}
+
+/* ---- Estilos específicos de Registro ---- */
+
+/* Estilos para la selección de Tipo de Usuario */
+.user-type-selection {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Espacio entre los dos botones */
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.user-type-btn {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+    padding: 20px 15px;
+    border: 1px solid var(--color-borde);
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+    color: var(--color-texto-secundario);
+}
+
+.user-type-btn:hover {
+    border-color: #aaa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para el botón seleccionado (como en la foto) */
+.user-type-btn.active {
+    border-color: var(--color-principal);
+    border-width: 2px;
+    /* Un pequeño truco para que el borde no mueva el layout */
+    padding: 19px 14px; 
+    box-shadow: 0 0 10px rgba(108, 45, 58, 0.1);
+    color: var(--color-principal);
+}
+
+.user-type-btn i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block; /* Para que ocupe su propia línea */
+}
+
+.user-type-btn strong {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--color-texto);
+    margin-bottom: 5px;
+}
+
+.user-type-btn span {
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+    line-height: 1.4;
+}
+
+/* Estilos para el texto de Términos y Política */
+.terms-policy {
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+    line-height: 1.5;
+    text-align: left; /* Alineado a la izquierda en la foto */
+    margin-bottom: 25px;
+}
+
+.terms-policy a {
+    color: var(--color-principal);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.terms-policy a:hover {
+    text-decoration: underline;
+}
