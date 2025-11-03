@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="../css/login-register/register.css">
     <link rel="icon" type="image/ico" href="../ico/icono.png" id="icon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="module" src="../../controllers/register-controller.js"></script> <!--module: habilita el uso de import/export en el navegador-->
 </head>
+
 <body>
 
     <div class="login-container">
@@ -24,7 +27,7 @@
         </div>
 
         <form action="#" method="POST" class="register-form">
-            
+
             <label for="fullname">Nombre Completo *</label>
             <div class="input-group">
                 <i class="fas fa-user icon"></i>
@@ -58,7 +61,8 @@
             <label for="birthdate">Fecha de Nacimiento</label>
             <div class="input-group">
                 <i class="fas fa-calendar-alt icon"></i>
-                <input type="text" id="birthdate" name="birthdate" placeholder="dd/mm/aaaa" onfocus="(this.type='date')" onblur="(this.type='text')">
+                <input type="text" id="birthdate" name="birthdate" placeholder="dd/mm/aaaa" onfocus="(this.type='date')"
+                    onblur="(this.type='text')">
             </div>
 
             <label>Tipo de Usuario *</label>
@@ -76,17 +80,17 @@
             </div>
 
             <div class="terms-policy">
-                Al registrarte, aceptas nuestros 
-                <a href="#">Términos de Servicio</a> y 
+                Al registrarte, aceptas nuestros
+                <a href="#">Términos de Servicio</a> y
                 <a href="#">Política de Privacidad</a>
             </div>
 
-            <button type="submit" class="submit-btn" onclick="window.location.href='home.html'">
+            <button type="submit" class="submit-btn">
                 Registrarse
             </button>
-            
+
         </form>
     </div>
-<script src="../js/register-controller.js"></script>
 </body>
+
 </html>

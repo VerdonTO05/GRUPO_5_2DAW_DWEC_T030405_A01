@@ -1,10 +1,10 @@
-// Espera a que todo el contenido HTML se haya cargado
-document.addEventListener('DOMContentLoaded', () => {
+import { addUser, userExists } from "../models/user-model.js";
+import { validateEmail, validatePassword, validatePasswordMatch, validateFullName, validateBirthdate } from "../models/validation.js";
 
-    // --- Lógica para la selección de Tipo de Usuario ---
+document.addEventListener("DOMContentLoaded", () => {
 
+     // --- Lógica para la selección de Tipo de Usuario ---
     const userTypeButtons = document.querySelectorAll('.user-type-btn');
-    
     // Variable para guardar el tipo seleccionado
     let selectedUserType = 'Participante'; // Valor por defecto
 
@@ -16,72 +16,74 @@ document.addEventListener('DOMContentLoaded', () => {
             // 2. Añadir la clase 'active' solo al botón clickeado
             button.classList.add('active');
             
-            // 3. Almacenar el valor (opcional, pero útil)
+            // 3. Almacenar el valor
             // Usamos .querySelector('strong') para obtener el texto "Participante" u "Organizador"
             selectedUserType = button.querySelector('strong').textContent;
             console.log('Tipo de usuario seleccionado:', selectedUserType);
         });
     });
 
-    // --- Lógica para el Formulario de Registro ---
+    const form = document.querySelector(".register-form");
 
-    const registerForm = document.querySelector('.register-form');
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Evita el envío automático del formulario
 
-    registerForm.addEventListener('submit', (event) => {
-        // Evita que el formulario se envíe de la forma tradicional
-        event.preventDefault();
+        const fullname = document.getElementById("fullname").value.trim();
+        const username = document.getElementById("username").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
+        const birthdate = document.getElementById("birthdate").value;
 
-        // 1. Obtener los valores de los campos
-        const fullname = document.getElementById('fullname').value;
-        const username = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirm-password').value;
-        const birthdate = document.getElementById('birthdate').value;
-
-        // 2. Validaciones básicas
-        if (!fullname || !username || !email || !password || !confirmPassword) {
-            alert('Por favor, completa todos los campos obligatorios (*).');
-            return; // Detiene la ejecución
-        }
-
-        if (password !== confirmPassword) {
-            alert('Las contraseñas no coinciden.');
-            return; // Detiene la ejecución
-        }
-
-        // 3. Obtener el array de usuarios de localStorage
-        // Si no existe, crea un array vacío
-        const users = JSON.parse(localStorage.getItem('moveos_users')) || [];
-
-        // 4. Comprobar si el usuario (por username o email) ya existe
-        const userExists = users.find(user => user.username === username || user.email === email);
-
-        if (userExists) {
-            alert('El nombre de usuario o el correo electrónico ya están registrados.');
+        // Validaciones (si hay algún fallo muestra alertas)
+        if (!validateFullName(fullname)) {
+            alert("Por favor, introduce tu nombre completo (mínimo nombre y apellido).");
             return;
         }
 
-        // 5. Crear el objeto del nuevo usuario
+        if (!validateEmail(email)) {
+            alert("Introduce un correo electrónico válido.");
+            return;
+        }
+
+        if (!validatePassword(password)) {
+            alert("La contraseña debe tener al menos 8 caracteres.");
+            return;
+        }
+
+        if (!validatePasswordMatch(password, confirmPassword)) {
+            alert("Las contraseñas no coinciden.");
+            return;
+        }
+
+        if (userExists(email, username)) {
+            alert("El usuario o correo ya está registrado.");
+            return;
+        }
+
+        if (!validateBirthdate(birthdate)){
+            alert("La fecha de nacimiento no es válida.");
+            return;
+        }
+
+        // Si todo es válido, crea el objeto usuario
         const newUser = {
-            fullname: fullname,
-            username: username,
-            email: email,
-            password: password, // ¡Recuerda, esto no es seguro para producción!
-            birthdate: birthdate,
-            userType: selectedUserType // El tipo que seleccionamos antes
+            fullname,
+            username,
+            email,
+            password, // Debería ir cifrada para más seguridad
+            birthdate,
+            createdAt: new Date().toISOString(),
+            userType: selectedUserType
         };
 
-        // 6. Añadir el nuevo usuario al array
-        users.push(newUser);
+        // Añadir al modelo
+        addUser(newUser);
 
-        // 7. Guardar el array actualizado de vuelta en localStorage
-        localStorage.setItem('moveos_users', JSON.stringify(users));
+        alert("¡Registro exitoso!");
+        form.reset();
 
-        // 8. Informar al usuario y redirigir
-        alert('¡Registro exitoso! Serás redirigido a la página de inicio de sesión.');
-        
-        // Redirige al login (ajusta la ruta si es necesario)
-        window.location.href = 'login.html'; 
+        // Redirigir
+        window.location.href='home.html';
     });
 });

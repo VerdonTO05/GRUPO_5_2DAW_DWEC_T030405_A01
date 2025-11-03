@@ -188,7 +188,7 @@ body {
 .user-type-btn.active {
     border-color: var(--color-principal);
     border-width: 2px;
-    /* Un pequeño truco para que el borde no mueva el layout */
+    /* Para que el borde no mueva el layout */
     padding: 19px 14px; 
     box-shadow: 0 0 10px rgba(108, 45, 58, 0.1);
     color: var(--color-principal);
