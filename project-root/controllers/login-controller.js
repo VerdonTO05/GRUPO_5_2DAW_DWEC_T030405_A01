@@ -1,6 +1,7 @@
+import { getUsers  } from "../models/user-model.js";   
+
 // Espera a que todo el contenido HTML se haya cargado
 document.addEventListener('DOMContentLoaded', () => {
-
     const loginForm = document.querySelector('.login-form');
 
     loginForm.addEventListener('submit', (event) => {
@@ -8,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
 
         // 1. Obtener los valores de los campos
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value.trim();
 
         // 2. Validaciones básicas
         if (!username || !password) {
@@ -17,26 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // 3. Obtener el array de usuarios de localStorage
-        const users = JSON.parse(localStorage.getItem('moveos_users')) || [];
+        // 3. Obtenemos los usuarios registrados desde el modelo
+        const users = getUsers();
 
-        // 4. Buscar al usuario en el array
-        const userFound = users.find(user => 
-            user.username === username && user.password === password
+        // 4. Buscamos coincidencia
+        const userFound = users.find(
+            (u) => u.username === username && u.password === password
         );
 
-        // 5. Comprobar el resultado
         if (userFound) {
-            // ¡Éxito!
             alert(`¡Bienvenido de nuevo, ${userFound.fullname}!`);
-            
-            // Aquí es donde redirigirías a la página principal de la app
-            // Por ejemplo: window.location.href = 'dashboard.html';
-            console.log('Inicio de sesión exitoso:', userFound);
-            
+            console.log("Inicio de sesión exitoso:", userFound);
+            window.location.href = "home.html";
         } else {
-            // Fracaso
-            alert('Nombre de usuario o contraseña incorrectos.');
+            alert("Usuario o contraseña incorrectos.");
         }
+
     });
 });

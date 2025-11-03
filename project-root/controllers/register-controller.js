@@ -1,3 +1,4 @@
+//Para que funcione correctamente, es necesario que se use la extension: Live Server 
 import { addUser, userExists } from "../models/user-model.js";
 import { validateEmail, validatePassword, validatePasswordMatch, validateFullName, validateBirthdate } from "../models/validation.js";
 
