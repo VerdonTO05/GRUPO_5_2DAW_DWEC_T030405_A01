@@ -32,11 +32,13 @@
   background-color: #f2f2f2;
 }
 
-/* ===== Grid de actividades ===== */
+/* ===== Actividades ===== */
 .grid-actividades {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 1rem; /* separa las tarjetas */
+  padding: 2rem; /* añade espacio interno */
+  justify-items: center; /* centra las tarjetas si son más pequeñas */
 }
 
 /* ===== Tarjeta de actividad ===== */
@@ -48,11 +50,14 @@
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 450px;
+  max-width: 550px; 
+  margin: 0 auto; 
 }
 
 .actividad:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 /* ===== Imagen ===== */
