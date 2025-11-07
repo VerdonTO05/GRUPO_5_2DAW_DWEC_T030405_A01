@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/home.css">
   <link rel="icon" type="image/ico" href="../ico/icono.png" id="icon.ico">
+  <script src="../../models/activities.js"></script>
 </head>
 
 <body>
@@ -53,57 +54,8 @@
         </select>
         <button class="btn-filtros">Más Filtros</button>
       </div>
-
-      <p>8 actividades encontradas</p>
-
-      <!-- Grid de actividades -->
-      <div class="grid-actividades">
-
-        <!-- Tarjeta de actividad -->
-        <article class="actividad">
-          <div class="actividad-imagen">
-            <img src="ruta.jpg" alt="Ruta de Senderismo">
-            <span class="etiqueta destacado">Recomendado</span>
-          </div>
-          <div class="actividad-contenido">
-            <h3>Ruta de Senderismo por la Sierra de Guadarrama</h3>
-            <p>Descubre la naturaleza en esta impresionante ruta...</p>
-            <ul class="detalles">
-              <li><i class="icon-fecha"></i> 25 Nov 2025</li>
-              <li><i class="icon-lugar"></i> Madrid</li>
-              <li><i class="icon-personas"></i> 8/10 participantes</li>
-            </ul>
-            <div class="precio">35€</div>
-            <div class="acciones">
-              <button class="btn-detalle">Ver Detalles</button>
-              <button class="btn-inscribirse">Inscribirse</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Puedes duplicar esta estructura para las demás actividades -->
-        <!-- Ejemplo breve -->
-        <article class="actividad">
-          <div class="actividad-imagen">
-            <img src="yoga.jpg" alt="Clase de Yoga para Principiantes">
-            <span class="etiqueta nuevo">Nuevo</span>
-          </div>
-          <div class="actividad-contenido">
-            <h3>Clase de Yoga para Principiantes</h3>
-            <p>Sesión de yoga para principiantes impartida por un instructor...</p>
-            <ul class="detalles">
-              <li>Barcelona</li>
-              <li>15€/persona</li>
-              <li>5 horas</li>
-            </ul>
-            <div class="acciones">
-              <button class="btn-detalle">Ver Detalles</button>
-              <button class="btn-inscribirse">Inscribirse</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- ... más tarjetas aquí -->
+      <!-- Actividades -->
+      <section class="grid-actividades" id="gridActividades"></section>
 
       </div>
     </section>

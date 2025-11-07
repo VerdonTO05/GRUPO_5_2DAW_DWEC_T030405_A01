@@ -1,14 +1,4 @@
-//Para que funcione correctamente, es necesario que se use la extension: Live Server
-import { addUser, userExists } from "../models/user-model.js";
-import {
-  validateEmail,
-  validatePassword,
-  validateFullName,
-} from "../models/validation.js";
-
-document.addEventListener("DOMContentLoaded", () => {
-  
-
+document.addEventListener("DOMContentLoaded", () => {  
   const form = document.querySelector(".register-form");
 
   form.addEventListener("submit", (event) => {

@@ -1,7 +1,7 @@
 /**
  * Valida formato de email
  */
-export function validateEmail(email) {
+function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
@@ -9,14 +9,14 @@ export function validateEmail(email) {
 /**
  * Valida longitud mínima de la contraseña
  */
-export function validatePassword(password) {
+function validatePassword(password) {
     return password.length >= 8;
 }
 
 /**
  * Valida que el nombre completo tenga al menos 2 palabras
  */
-export function validateFullName(name) {
+function validateFullName(name) {
     return name.trim().split(" ").length >= 2;
 }
 
