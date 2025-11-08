@@ -167,3 +167,13 @@
   background-color: #7a1c25;
 }
 
+#boton_mostrar_usuarios {
+  background-color: #af5353;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
