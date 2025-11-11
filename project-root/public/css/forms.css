@@ -7,7 +7,7 @@
     --color-fondo-tabs: #f3e9ea;
     --color-borde: #e0e0e0;
     --color-blanco: #ffffff;
-    --color-granate-oscuro:#3f0f1a;
+    --color-granate-oscuro: #3f0f1a;
 }
 
 /* Estilos generales y centrado del contenedor */
@@ -31,8 +31,6 @@ body {
     max-width: 500px;
     position: relative;
     box-sizing: border-box;
-    transform: scale(1.05);
-    /* agranda todo un poco */
 }
 
 /* Botón de cerrar (la X) */
@@ -49,7 +47,7 @@ body {
 
 /* Encabezados y textos descriptivos */
 .header h1 {
-    font-size: 26px;
+    font-size: 24px;
     font-style: italic;
     font-weight: bold;
     margin-top: 0;
@@ -58,7 +56,7 @@ body {
 }
 
 .login-header p {
-    font-size: 15px;
+    font-size: 13px;
     color: var(--color-texto-secundario);
     margin-bottom: 25px;
 }
@@ -92,16 +90,6 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Formulario y etiquetas */
-.login-form label {
-    display: block;
-    font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 8px;
-    margin-top: 20px;
-    color: var(--color-texto);
-}
-
 /* Contenedor de input con icono */
 .input-group {
     display: flex;
@@ -109,8 +97,8 @@ body {
     border: 1px solid var(--color-borde);
     background-color: var(--color-blanco);
     border-radius: 12px;
-    padding: 16px 12px;
-    font-size: 17px;
+    padding: 8px 4px;
+    font-size: 15px;
     margin-bottom: 10px;
     transition: border-color 0.3s;
 }

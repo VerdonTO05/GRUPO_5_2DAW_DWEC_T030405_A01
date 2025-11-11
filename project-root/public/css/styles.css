@@ -184,6 +184,36 @@ main section:first-of-type button:hover {
   opacity: 0.9;
 }
 
+.slogan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  background-color: var(--color-fondo-tabs);
+  color: var(--color-principal);
+  padding: 0.6em 1.2em;
+  border-radius: 50px;
+  border: 1px solid var(--color-borde);
+  font-weight: 400;
+  width: fit-content;
+  margin: 1em auto;
+}
+
+.slogan i {
+  font-size: 1.2rem;
+  color: var(--color-principal);
+}
+
+.slogan p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+.options{
+  margin-top: 1.5rem;
+}
+
 /* === TARJETAS DE BENEFICIOS === */
 main section:nth-of-type(2) {
   display: flex;
@@ -237,21 +267,24 @@ main section:nth-of-type(3) p {
 .icons {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.8em;
 }
 
 .icons i {
-  font-size: 1.1rem;
-  color: var(--color-principal);
+  font-size: 1rem;
+  color: var(--color-texto-secundario);
   cursor: pointer;
-  transition: color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 1em;              
+  border-radius: 6px;      
 }
 
 .icons i:hover {
-  color: var(--color-granate-oscuro);
+  background-color: var(--color-fondo-tabs); 
+  color: var(--color-texto-secundario);      
 }
 
-.btn-publicar {
+.btn-post {
   background-color: var(--color-principal);
   color: var(--color-blanco);
   border: none;
@@ -266,7 +299,7 @@ main section:nth-of-type(3) p {
   justify-content: center;
   gap: 2rem;
   padding: 2rem 0;
-  background-color: var(--color-fondo-tabs);
+  background-color: var(--color-fondo-principal);
 }
 
 .feature-card {
@@ -309,7 +342,7 @@ main section:nth-of-type(3) p {
 
 
 /* ===== Filtros ===== */
-.filtros {
+.filters {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -317,8 +350,8 @@ main section:nth-of-type(3) p {
   margin-bottom: 2rem;
 }
 
-.filtros input[type="text"],
-.filtros select {
+.filters input[type="text"],
+.filters select {
   flex: 1;
   min-width: 250px;
   padding: 0.75rem 1rem;
@@ -328,7 +361,7 @@ main section:nth-of-type(3) p {
   background-color: var(--color-blanco);
 }
 
-.btn-filtros {
+.btn-filters {
   background-color: var(--color-blanco);
   border: 1px solid var(--color-borde);
   padding: 0.75rem 1.25rem;
@@ -337,12 +370,12 @@ main section:nth-of-type(3) p {
   font-weight: 500;
 }
 
-.btn-filtros:hover {
+.btn-filters:hover {
   background-color: var(--color-fondo-tabs);
 }
 
 /* ===== Actividades ===== */
-.grid-actividades {
+.grid-activities {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   gap: 1rem; /* separa las tarjetas */
@@ -370,13 +403,13 @@ main section:nth-of-type(3) p {
 }
 
 /* ===== Imagen ===== */
-.actividad-imagen {
+.activity-imagen {
   position: relative;
   height: 200px;
   overflow: hidden;
 }
 
-.actividad-imagen img {
+.activity-imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -402,20 +435,20 @@ main section:nth-of-type(3) p {
 }
 
 /* ===== Contenido ===== */
-.actividad-contenido {
+.activity-contenido {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.actividad-contenido h3 {
+.activity-contenido h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
-.actividad-contenido p {
+.activity-contenido p {
   color: var(--color-texto);
   font-size: 0.95rem;
   margin-bottom: 1rem;
@@ -476,7 +509,7 @@ main section:nth-of-type(3) p {
   background-color: var(--color-granate-oscuro);
 }
 
-#boton_mostrar_usuarios {
+#btn_users {
   background-color: var(--color-principal);
   color: var(--color-blanco);;
   border: none;
@@ -486,5 +519,56 @@ main section:nth-of-type(3) p {
   font-weight: 600;
 }
 
+/* === INTERRUPTOR DE TEMA === */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
 
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* La parte deslizante del switch */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Cuando está activado */
+input:checked + .slider {
+  background-color: var(--color-principal);
+}
+
+input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+/* Efecto visual de transición entre temas */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
 

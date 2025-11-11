@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     // Contenedor donde se insertarán las actividades
-    const contenedor = document.getElementById("gridActividades");
+    const contenedor = document.getElementById("gridActivities");
 
     // Generar dinámicamente las tarjetas
     actividades.forEach(act => {
@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", () => {
         article.classList.add("actividad");
 
         article.innerHTML = `
-    <div class="actividad-imagen">
+    <div class="activity-imagen">
       <img src="${act.imagen}" alt="${act.alt}">
       <span class="etiqueta ${act.claseEtiqueta}">${act.etiqueta}</span>
     </div>
-    <div class="actividad-contenido">
+    <div class="activity-contenido">
       <h3>${act.titulo}</h3>
       <p>${act.descripcion}</p>
       <ul class="detalles">
