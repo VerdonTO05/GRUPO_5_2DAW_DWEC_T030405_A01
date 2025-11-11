@@ -22,14 +22,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Creamos el texto para mostrar los datos del usuario
                 li.innerHTML = `
+                    <hr>
                     <strong>Usuario:</strong> ${usuario.username} <br>
                     <strong>Nombre:</strong> ${usuario.fullname} <br>
                     <strong>Email:</strong> ${usuario.email}
+                    
                 `;
                 
                 // Añadimos el <li> al <ul>
-                listaUL.appendChild(li);
+                listaUL.appendChild(li);    
             });
+            
 
         } else {
             // El array existe pero está vacío
