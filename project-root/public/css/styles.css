@@ -1,16 +1,28 @@
-/*Estilo de la cabecera y el pie de página*/
+/* Variables para los colores */
+:root {
+    --color-fondo-principal: #fef8f8;
+    --color-principal: #6c2d3a;
+    --color-texto: #333;
+    --color-texto-secundario: #666;
+    --color-fondo-tabs: #f3e9ea;
+    --color-borde: #e0e0e0;
+    --color-blanco: #ffffff;
+    --color-granate-oscuro:#3f0f1a;
+    --color-verde:#2ecc71;
+    --color-morado: #9b59b6;
+  }
 
 /* === Cabecera === */
 body {
   font-family: "Inter", Arial, sans-serif;
-  background-color: #fdf8f8;
-  color: #3b2a2a;
+  background-color: var(--color-fondo-principal);
+  color: var(--color-texto);
   line-height: 1.6;
 }
 
 header {
-  background: #fff;
-  border-bottom: 1px solid #f0e0e0;
+  background: var(--color-blanco);
+  border-bottom: 1px solid var(--color-borde);
   padding: 1rem 2rem;
 }
 
@@ -30,12 +42,12 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #3b2a2a;
+  color: var(--color-granate-oscuro);
   font-weight: 500;
 }
 
 nav a:hover {
-  color: #8b4c4c;
+  color: var(--color-principal);
 }
 
 nav div button {
@@ -48,15 +60,15 @@ nav div button {
 }
 
 nav div button:last-child {
-  background-color: #582c2c;
-  color: #fff;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
 }
 
 /* === FOOTER === */
 footer {
-  background: #fff;
+  background:var(--color-blanco);
   padding: 3rem 2rem 1rem;
-  color: #4a3b3b;
+  color:var(--color-texto);
 }
 
 footer section {
@@ -69,12 +81,12 @@ footer section {
 }
 
 footer h3 {
-  color: #582c2c;
+  color: var(--color-principal);
 }
 
 footer h4 {
   margin-bottom: 0.5rem;
-  color: #3b2a2a;
+  color: var(--color-texto);
 }
 
 footer ul {
@@ -88,17 +100,17 @@ footer li {
 
 footer a {
   text-decoration: none;
-  color: #5a4a4a;
+  color: var(--color-texto);
 }
 
 footer a:hover {
-  color: #8b4c4c;
+  color: var(--color-principal);
 }
 
 footer p {
   text-align: center;
   font-size: 0.9rem;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-borde);
   padding-top: 1rem;
 }
 
@@ -112,12 +124,367 @@ footer p {
 .logo-container img {
   height: 40px;
   width: auto;
-  margin-right: 8px; /* espacio entre logo y texto */
+  margin-right: 8px; 
 }
 
 .logo-container span {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #582c2c;
+  color: var(--color-principal);
 }
+
+
+/* === HERO PRINCIPAL === */
+main section:first-of-type {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+}
+
+main section:first-of-type p:first-child {
+  color: var(--color-principal);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+main section:first-of-type h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-granate-oscuro);
+}
+
+main section:first-of-type p:nth-of-type(2) {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: var(--color-principal);
+}
+
+main section:first-of-type div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main section:first-of-type button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--color-principal);
+  border-radius: 10px;
+  background: var(--color-blanco);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+main section:first-of-type button:first-child {
+  background: var(--color-principal);
+  color: var(--color-blanco);
+}
+
+main section:first-of-type button:hover {
+  opacity: 0.9;
+}
+
+/* === TARJETAS DE BENEFICIOS === */
+main section:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 3rem 2rem;
+}
+
+main section:nth-of-type(2) article {
+  background: var(--color-blanco);
+  border-radius: 12px;
+  border: 1px solid;
+  border-color:var(--color-principal);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+}
+
+main section:nth-of-type(2) h3 {
+  color: var(--color-principal);
+  margin-bottom: 0.5rem;
+}
+
+/* === ESTADÍSTICAS === */
+main section:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--color-borde);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+main section:nth-of-type(3) div {
+  text-align: center;
+}
+
+main section:nth-of-type(3) h2 {
+  color: var(--color-principal);
+  font-size: 2rem;
+}
+
+main section:nth-of-type(3) p {
+  color: var(--color-principal);
+}
+
+/* Iconos */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icons i {
+  font-size: 1.1rem;
+  color: var(--color-principal);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icons i:hover {
+  color: var(--color-granate-oscuro);
+}
+
+.btn-publicar {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  background-color: var(--color-fondo-tabs);
+}
+
+.feature-card {
+  background-color: var(--color-fondo-tabs);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.icon-circle {
+  background-color: var(--color-fondo-tabs);
+  color: var(--color-principal);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.icon-circle i {
+  font-size: 1.5rem;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-principal);
+}
+
+.feature-card p {
+  color: var(--color-principal);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+/* ===== Filtros ===== */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.filtros input[type="text"],
+.filtros select {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: var(--color-blanco);
+}
+
+.btn-filtros {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-filtros:hover {
+  background-color: var(--color-fondo-tabs);
+}
+
+/* ===== Actividades ===== */
+.grid-actividades {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 1rem; /* separa las tarjetas */
+  padding: 2rem; /* añade espacio interno */
+  justify-items: center; /* centra las tarjetas si son más pequeñas */
+}
+
+/* ===== Tarjeta de actividad ===== */
+.actividad {
+  background-color: var(--color-blanco);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 450px;
+  max-width: 550px; 
+  margin: 0 auto; 
+}
+
+.actividad:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* ===== Imagen ===== */
+.actividad-imagen {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.actividad-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.etiqueta {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-blanco);
+}
+
+.etiqueta.destacado {
+  background-color: var(--color-verde);
+}
+
+.etiqueta.nuevo {
+  background-color: var(--color-morado);
+}
+
+/* ===== Contenido ===== */
+.actividad-contenido {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.actividad-contenido h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.actividad-contenido p {
+  color: var(--color-texto);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.detalles {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  color: var(--color-texto);
+  font-size: 0.9rem;
+}
+
+.detalles li {
+  margin-bottom: 0.25rem;
+}
+
+/* ===== Precio y botones ===== */
+.precio {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-detalle,
+.btn-inscribirse {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-detalle {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+}
+
+.btn-detalle:hover {
+  background-color: var(--color-fondo-tabs);
+}
+
+.btn-inscribirse {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+}
+
+.btn-inscribirse:hover {
+  background-color: var(--color-granate-oscuro);
+}
+
+#boton_mostrar_usuarios {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
 
