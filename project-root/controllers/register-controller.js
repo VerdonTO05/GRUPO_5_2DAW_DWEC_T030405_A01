@@ -43,8 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Añadir al modelo
     addUser(newUser);
 
-    alert("¡Registro exitoso!");
-    form.reset();
+    
 
     // Redirigir
     window.location.href = "home.html";

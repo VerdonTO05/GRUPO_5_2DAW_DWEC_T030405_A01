@@ -1,11 +1,20 @@
-import { getUsers  } from "../models/user-model.js";   
+// ¡¡NO DEBE HABER NINGÚN 'import' AQUÍ ARRIBA!!
 
-// Espera a que todo el contenido HTML se haya cargado
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.querySelector('.login-form');
 
+    // Cierro de la "x" (para ir a landing.html)
+    const closeBtn = document.querySelector('.close-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            // Ajusta esta ruta si 'landing.html' no está en el mismo directorio
+            window.location.href = 'landing.html'; 
+        });
+    }
+
+    // Manejo del formulario de login
     loginForm.addEventListener('submit', (event) => {
-        // Evita que el formulario se envíe de la forma tradicional
+        // Evita que el formulario se envíe (ESTO PREVIENE EL ERROR 405)
         event.preventDefault();
 
         // 1. Obtener los valores de los campos
@@ -18,8 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // 3. Obtenemos los usuarios registrados desde el modelo
-        const users = getUsers();
+        // 3. Obtenemos los usuarios desde localStorage
+        // Asumo que guardaste el array bajo la llave 'users'
+        // localStorage solo guarda texto, así que convertimos el texto (JSON) a un array
+        const usersJSON = localStorage.getItem('usuariosGuardados');
+        const users = usersJSON ? JSON.parse(usersJSON) : []; // Si está vacío, usa un array vacío
 
         // 4. Buscamos coincidencia
         const userFound = users.find(
@@ -29,10 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (userFound) {
             alert(`¡Bienvenido de nuevo, ${userFound.fullname}!`);
             console.log("Inicio de sesión exitoso:", userFound);
-            window.location.href = "home.html";
+            
+            // ¡Importante! Guarda el usuario que ha iniciado sesión
+            // para usarlo en 'home.html'
+            sessionStorage.setItem('currentUser', JSON.stringify(userFound));
+
+            // Redirige a home.html
+            // (La ruta que tenías parece correcta si 'project-root' es la raíz del servidor)
+            window.location.href = "/project-root/public/views/home.html";
+
         } else {
             alert("Usuario o contraseña incorrectos.");
         }
-
     });
 });
