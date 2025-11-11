@@ -49,4 +49,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // Redirigir
     window.location.href = "home.html";
   });
+
+  const registerForm = document.querySelector('.register-form');
+
+  if(registerForm){
+    registerForm.addEventListener('submit',(evento) =>{
+      evento.preventDefault();
+      const fullname = document.getElementById('fullname').value;
+      const username = document.getElementById('username').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const newUser = {
+        fullname: fullname,
+        username: username,
+        email: email,
+        password: password
+      };
+
+      let usuarios = JSON.parse(localStorage.getItem('usuariosGuardados')) || [];
+
+      usuarios.push(newUser);
+
+      localStorage.setItem('usuariosGuardados', JSON.stringify(usuarios));
+      alert('¡Usuario "' + username + '" registrado con éxito!');
+      registerForm.reset();
+    });
+  }
 });

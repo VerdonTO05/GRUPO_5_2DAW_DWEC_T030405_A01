@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () =>{
 
-import ("../models/user-model");
-
-console.log(users);
+document.getElementById("boton_mostrar_usuarios").addEventListener("click", function() {
+    window.location.href = "users.html";
+  });
 
 
 
