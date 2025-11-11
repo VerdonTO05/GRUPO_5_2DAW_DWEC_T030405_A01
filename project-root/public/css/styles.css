@@ -12,6 +12,20 @@
     --color-morado: #9b59b6;
   }
 
+  /* === MODO OSCURO === */
+.dark-mode {
+  --color-fondo-principal: #1a1214;
+  --color-principal: #c87b7f;
+  --color-texto: #f0f0f0;
+  --color-texto-secundario: #b8a5a8;
+  --color-fondo-tabs: #f0f0f0;
+  --color-borde: #382527;
+  --color-blanco: #1a1214;
+  --color-granate-oscuro: #b77174;
+  --color-verde: #27ae60;
+  --color-morado: #8e44ad;
+}
+
 /* === Cabecera === */
 body {
   font-family: "Inter", Arial, sans-serif;
@@ -378,13 +392,13 @@ main section:nth-of-type(3) p {
 .grid-activities {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  gap: 1rem; /* separa las tarjetas */
-  padding: 2rem; /* añade espacio interno */
-  justify-items: center; /* centra las tarjetas si son más pequeñas */
+  gap: 1rem; 
+  padding: 1rem; 
+  justify-items: center; 
 }
 
 /* ===== Tarjeta de actividad ===== */
-.actividad {
+.activity {
   background-color: var(--color-blanco);
   border-radius: 20px;
   overflow: hidden;
@@ -397,25 +411,25 @@ main section:nth-of-type(3) p {
   margin: 0 auto; 
 }
 
-.actividad:hover {
+.activity:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 /* ===== Imagen ===== */
-.activity-imagen {
+.activity-image {
   position: relative;
   height: 200px;
   overflow: hidden;
 }
 
-.activity-imagen img {
+.activity-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.etiqueta {
+.tag {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -426,62 +440,62 @@ main section:nth-of-type(3) p {
   color: var(--color-blanco);
 }
 
-.etiqueta.destacado {
+.tag.destacado {
   background-color: var(--color-verde);
 }
 
-.etiqueta.nuevo {
+.tag.nuevo {
   background-color: var(--color-morado);
 }
 
 /* ===== Contenido ===== */
-.activity-contenido {
-  padding: 1.5rem;
+.activity-content {
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.activity-contenido h3 {
+.activity-content h3 {
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
   font-weight: 600;
 }
 
-.activity-contenido p {
+.activity-content p {
   color: var(--color-texto);
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+  font-size: 0.90rem;
+  margin-bottom: 0.5rem;
 }
 
-.detalles {
+.details {
   list-style: none;
   padding: 0;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.3rem 0;
   color: var(--color-texto);
   font-size: 0.9rem;
 }
 
-.detalles li {
+.details li {
   margin-bottom: 0.25rem;
 }
 
 /* ===== Precio y botones ===== */
-.precio {
+.price {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-texto);
+  color: var(--color-granate-oscuro);
   margin-top: auto;
   margin-bottom: 1rem;
 }
 
-.acciones {
+.actions {
   display: flex;
   gap: 0.5rem;
 }
 
-.btn-detalle,
-.btn-inscribirse {
+.btn-detail,
+.btn-signup {
   flex: 1;
   border: none;
   border-radius: 10px;
@@ -491,22 +505,22 @@ main section:nth-of-type(3) p {
   transition: background-color 0.2s;
 }
 
-.btn-detalle {
+/* .btn-detail {
   background-color: var(--color-blanco);
   border: 1px solid var(--color-borde);
 }
 
-.btn-detalle:hover {
-  background-color: var(--color-fondo-tabs);
-}
-
-.btn-inscribirse {
-  background-color: var(--color-principal);
-  color: var(--color-blanco);
-}
-
-.btn-inscribirse:hover {
+.btn-detail:hover {
   background-color: var(--color-granate-oscuro);
+} */
+
+.btn-signup {
+  background-color: var(--color-principal);
+  color: var(--color-principal);
+}
+
+.btn-signup:hover {
+  background-color: var(--color-borde);
 }
 
 #btn_users {
@@ -572,3 +586,4 @@ body {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
+/*Dividir en varios archivos para mas claridad*/

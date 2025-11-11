@@ -1,62 +1,89 @@
 // Lista de actividades 
 document.addEventListener("DOMContentLoaded", () => {
-    const actividades = [
-        {
-            titulo: "Ruta de Senderismo por la Sierra de Guadarrama",
-            descripcion: "Descubre la naturaleza en esta impresionante ruta...",
-            imagen: "../img/ruta.jpg",
-            alt: "Ruta de Senderismo",
-            etiqueta: "Recomendado",
-            claseEtiqueta: "destacado",
-            detalles: [
-                '25 Nov 2025',
-                'Madrid',
-                '8/10 participantes'
-            ],
-            precio: "35€"
-        },
-        {
-            titulo: "Clase de Yoga",
-            descripcion: "Sesión de yoga para principiantes impartida por un instructor...",
-            imagen: "../img/yoga.jpg",
-            alt: "Clase de Yoga",
-            etiqueta: "Nuevo",
-            claseEtiqueta: "nuevo",
-            detalles: [
-                "Barcelona",
-                "15€/persona",
-                "5 horas"
-            ],
-            precio: "20€"
-        }
-    ];
+  const activities = [
+    {
+      title: "Ruta de Senderismo en la Sierra de Guadarrama",
+      description: "Descubre la naturaleza en esta impresionante ruta...",
+      image: "../img/ruta.jpg",
+      alt: "Ruta de Senderismo",
+      label: "Recomendado",
+      labelClass: "destacado",
+      details: [
+        '25 Nov 2025',
+        'Madrid',
+        '8/10 participantes'
+      ],
+      price: "35€"
+    },
+    {
+      title: "Clase de Yoga",
+      description: "Sesión de yoga para principiantes impartida por un instructor...",
+      image: "../img/yoga.jpg",
+      alt: "Clase de Yoga",
+      label: "Nuevo",
+      labelClass: "nuevo",
+      details: [
+        "Barcelona",
+        "15€/persona",
+        "5 horas"
+      ],
+      price: "20€"
+    }, {
+      title: "Clase de Yoga",
+      description: "Sesión de yoga para principiantes impartida por un instructor...",
+      image: "../img/yoga.jpg",
+      alt: "Clase de Yoga",
+      label: "Nuevo",
+      labelClass: "nuevo",
+      details: [
+        "Barcelona",
+        "15€/persona",
+        "5 horas"
+      ],
+      price: "20€"
+    }, {
+      title: "Clase de Yoga",
+      description: "Sesión de yoga para principiantes impartida por un instructor...",
+      image: "../img/yoga.jpg",
+      alt: "Clase de Yoga",
+      label: "Nuevo",
+      labelClass: "nuevo",
+      details: [
+        "Barcelona",
+        "15€/persona",
+        "5 horas"
+      ],
+      price: "20€"
+    }
+  ];
 
-    // Contenedor donde se insertarán las actividades
-    const contenedor = document.getElementById("gridActivities");
 
-    // Generar dinámicamente las tarjetas
-    actividades.forEach(act => {
-        const article = document.createElement("article");
-        article.classList.add("actividad");
+  // Contenedor donde se insertarán las actividades
+  const container = document.getElementById("gridActivities");
 
-        article.innerHTML = `
-    <div class="activity-imagen">
-      <img src="${act.imagen}" alt="${act.alt}">
-      <span class="etiqueta ${act.claseEtiqueta}">${act.etiqueta}</span>
+  // Generar dinámicamente las tarjetas
+  activities.forEach(act => {
+    const article = document.createElement("article");
+    article.classList.add("activity");
+
+    article.innerHTML = `
+    <div class="activity-image">
+      <img src="${act.image}" alt="${act.alt}">
+      <span class="tag ${act.labelClass}">${act.label}</span>
     </div>
-    <div class="activity-contenido">
-      <h3>${act.titulo}</h3>
-      <p>${act.descripcion}</p>
-      <ul class="detalles">
-        ${act.detalles.map(d => `<li>${d}</li>`).join("")}
+    <div class="activity-content">
+      <h3>${act.title}</h3>
+      <p>${act.description}</p>
+      <ul class="details">
+        ${act.details.map(d => `<li>${d}</li>`).join("")}
       </ul>
-      ${act.precio ? `<div class="precio">${act.precio}</div>` : ""}
-      <div class="acciones">
-        <button class="btn-detalle">Ver Detalles</button>
-        <button class="btn-inscribirse">Inscribirse</button>
+      ${act.price ? `<div class="price">${act.price}</div>` : ""}
+      <div class="actions">
+        <button class="btn-detail">Ver Detalles</button>
+        <button class="btn-signup">Inscribirse</button>
       </div>
     </div>
   `;
-        contenedor.appendChild(article);
-    });
+    container.appendChild(article);
+  });
 });
