@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const activitiesData = [
     {
       title: "Ruta de Senderismo en la Sierra de Guadarrama",
-      description: "Descubre la naturaleza en esta impresionante ruta...",
+      description: "Descubre la naturaleza en esta impresionante ruta por la Sierra de Guadarrama.",
       image: "../img/ruta.jpg",
       alt: "Ruta de Senderismo",
       label: "Recomendado",
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Clase de Yoga",
-      description: "Sesión de yoga para principiantes impartida por un instructor...",
+      description: "Sesión de yoga para principiantes impartida por un instructor especializado.",
       image: "../img/yoga.jpg",
       alt: "Clase de Yoga",
       label: "Nuevo",
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "../img/vinos.jpg",
       alt: "Cata de Vinos",
       label: "Exclusivo",
-      labelClass: "premium",
+      labelClass: "destacado",
       details: [
         "La Rioja",
         "25 Nov 2025",
