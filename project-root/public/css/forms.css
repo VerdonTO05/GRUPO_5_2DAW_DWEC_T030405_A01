@@ -165,13 +165,9 @@ body {
     margin-top: 10px;
 }
 
-.submit-btn:hover {
-    background-color: var(--color-granate-oscuro);
-}
-
 /* Responsive para pantallas pequeñas */
 @media (max-width: 480px) {
-    .login-container {
+    .container {
         max-width: 90%;
         transform: scale(1);
         padding: 35px 25px;
@@ -185,5 +181,31 @@ body {
   right: 20px;
   width: 50px;
   height: 26px;
+}
+
+/*Por cambiar*/
+.user-list {
+  display: flex;
+  gap: 1rem; /* espacio entre tarjetas */
+  padding: 0;
+  list-style: none;
+  justify-content: center; /* centra horizontalmente */
+}
+
+.user-list li {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-weight: 400;
+  text-align: center;
+  flex: 1; /* todas las tarjetas mismo ancho */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.user-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
