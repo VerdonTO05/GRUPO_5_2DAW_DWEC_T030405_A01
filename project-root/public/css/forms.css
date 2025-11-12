@@ -1,19 +1,10 @@
-/* Variables para los colores */
-:root {
-    --color-fondo-principal: #fef8f8;
-    --color-principal: #6c2d3a;
-    --color-texto: #333;
-    --color-texto-secundario: #666;
-    --color-fondo-tabs: #f3e9ea;
-    --color-borde: #e0e0e0;
-    --color-blanco: #ffffff;
-    --color-granate-oscuro: #3f0f1a;
-}
+@import url(colors.css);
+@import url(theme.css);
 
 /* Estilos generales y centrado del contenedor */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--color-fondo-principal);
+    font-family: "Inter", Arial, sans-serif;
+    background-color: var(--bg-surface);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +14,8 @@ body {
 
 /* Contenedor del formulario */
 .container {
-    background-color: var(--color-fondo-principal);
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
     padding: 50px 40px;
     border-radius: 20px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
@@ -42,7 +34,7 @@ body {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: var(--color-texto-secundario);
+    color: var(--text-secondary);
 }
 
 /* Encabezados y textos descriptivos */
@@ -52,19 +44,19 @@ body {
     font-weight: bold;
     margin-top: 0;
     margin-bottom: 5px;
-    color: var(--color-granate-oscuro);
+    color: var(--brand-dark);
 }
 
-.login-header p {
-    font-size: 13px;
-    color: var(--color-texto-secundario);
+.header p {
+    font-size: 17px;
+    color: var(--text-primary);
     margin-bottom: 25px;
 }
 
 /* Pestañas de alternancia (Iniciar Sesión/Registrarse) */
 .tab-switch {
     display: flex;
-    background-color: var(--color-fondo-tabs);
+    background-color: var(--bg-main);
     border-radius: 25px;
     padding: 5px;
     margin-bottom: 25px;
@@ -81,21 +73,25 @@ body {
     font-size: 18px;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: var(--color-texto-secundario);
+    color: var(--text-secondary);
 }
 
 .tab-btn.active {
-    background-color: var(--color-blanco);
-    color: var(--color-texto);
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenedor de input con icono */
+label {
+    color: var(--text-primary);
+}
+
 .input-group {
     display: flex;
     align-items: center;
-    border: 1px solid var(--color-borde);
-    background-color: var(--color-blanco);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-main);
     border-radius: 12px;
     padding: 8px 4px;
     font-size: 15px;
@@ -104,7 +100,7 @@ body {
 }
 
 .input-group:focus-within {
-    border-color: var(--color-principal);
+    border-color: var(--brand-primary);
     /* Resaltar al enfocar */
 }
 
@@ -119,7 +115,7 @@ body {
 
 .input-group .icon,
 .input-group .eye-icon {
-    color: var(--color-texto-secundario);
+    color: var(--text-secondary);
     font-size: 18px;
     width: 20px;
     text-align: center;
@@ -129,16 +125,22 @@ body {
     cursor: pointer;
 }
 
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+    color: var(--text-secondary);
+}
+
 /* Placeholder (texto "tu_usuario") */
 ::placeholder {
-    color: var(--color-texto-secundario);
+    color: var(--text-secondary);
 }
 
 /* Enlace "¿Olvidaste tu contraseña?" */
 .forgot-password {
     display: block;
     text-align: left;
-    color: var(--color-principal);
+    color: var(--brand-primary);
     font-size: 14px;
     text-decoration: none;
     font-weight: bold;
@@ -154,7 +156,7 @@ body {
 .submit-btn {
     width: 100%;
     padding: 17px;
-    background-color: var(--color-principal);
+    background-color: var(--brand-primary);
     color: white;
     border: none;
     border-radius: 10px;
@@ -185,27 +187,19 @@ body {
 
 /*Por cambiar*/
 .user-list {
-  display: flex;
-  gap: 1rem; /* espacio entre tarjetas */
-  padding: 0;
-  list-style: none;
-  justify-content: center; /* centra horizontalmente */
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
 }
 
 .user-list li {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  font-weight: 400;
-  text-align: center;
-  flex: 1; /* todas las tarjetas mismo ancho */
-  transition: transform 0.3s, box-shadow 0.3s;
+    background-color: var(--bg-main);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s;
 }
 
-.user-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
 
