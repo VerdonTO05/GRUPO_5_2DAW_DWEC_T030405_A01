@@ -11,8 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isDark) {
             localStorage.setItem('dark-mode', 'true');
+            localStorage.setItem('light-mode','false');
         } else {
             localStorage.setItem('dark-mode', 'false');
+            localStorage.setItem('light-mode','true');
         }
     });
 });
