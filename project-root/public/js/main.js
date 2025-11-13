@@ -1,8 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleSwitch = document.getElementById('theme-toggle');
+document.addEventListener ( 'DOMContentLoaded' , () => {
+ const interruptor = document.getElementById ( 'theme-toggle' ) ;
+ const darkModeEnabled = localStorage.getItem ( 'dark-mode' ) === 'true' ;
 
-    toggleSwitch.addEventListener("change", () => {
-        document.body.classList.toggle("dark-mode", toggleSwitch.checked);
-    });
+ document.body.classList.toggle ( 'dark-mode' , darkModeEnabled ) ;
+ interruptor.checked = modooscuroActivado ;
 
-});
+ toggleSwitch.addEventListener ( 'change' , () => {
+ const isDark = toggleSwitch.checked ;
+ document.body.classList.toggle ( 'dark-mode' , isDark ) ;
+ localStorage.setItem ( 'modo oscuro' , isDark );
+ });
+ });
