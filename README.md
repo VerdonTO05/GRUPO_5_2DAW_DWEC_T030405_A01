@@ -1,1 +1,48 @@
+# GRUPO_5_2DAW_DWEC_T030405_A01
 
+> Mini proyecto para la asignatura DWEC (Desarrollo Web en Entorno Cliente) que implementa la estructura de un proyecto siguiendo el patrón Modelo-Vista-Controlador (MVC).
+
+## Descripción del Proyecto
+
+Este repositorio contiene un proyecto desarrollado como parte de la asignatura DWEC. El objetivo principal es aplicar y comprender la arquitectura de software **Modelo-Vista-Controlador (MVC)** en un entorno de desarrollo web front-end, utilizando tecnologías web estándar.
+
+## 🚀 Tecnologías Utilizadas
+
+Este proyecto está construido exclusivamente con tecnologías front-end:
+
+* **HTML5:** Para la estructura y el contenido semántico de la aplicación.
+* **CSS3:** Para el diseño, la presentación y los estilos visuales.
+* **JavaScript (ES6+):** Para la lógica de la aplicación, la manipulación del DOM y la implementación del patrón MVC.
+
+## 📂 Estructura del Proyecto
+
+El código fuente sigue una organización basada en el patrón Modelo-Vista-Controlador:
+
+* **Modelo (Model):** Contiene la lógica de negocio y los datos de la aplicación. Se encarga de gestionar el estado.
+* **Vista (View):** Es la capa de presentación. Se encarga de renderizar la interfaz de usuario (UI) y mostrar los datos del modelo.
+* **Controlador (Controller):** Actúa como intermediario entre el Modelo y la Vista. Maneja las interacciones del usuario, actualiza el modelo y, a su vez, hace que la vista se actualice.
+
+La carpeta principal del código fuente es `project-root/`.
+
+## 🔧 Instalación y Uso
+
+Dado que es un proyecto basado en HTML, CSS y JavaScript puros, no requiere un proceso de instalación complejo ni dependencias de servidor.
+
+1.  **Clona el repositorio** en tu máquina local:
+    ```bash
+    git clone [https://github.com/VerdonTO05/GRUPO_5_2DAW_DWEC_T030405_A01.git](https://github.com/VerdonTO05/GRUPO_5_2DAW_DWEC_T030405_A01.git)
+    ```
+
+2.  **Navega a la carpeta** del proyecto:
+    ```bash
+    cd GRUPO_5_2DAW_DWEC_T030405_A01
+    ```
+
+3.  **Abre el archivo `index.html`** (probablemente ubicado dentro de la carpeta `project-root/`) directamente en tu navegador web preferido (como Chrome, Firefox o Edge).
+
+## 👥 Colaboradores
+
+* **[VerdonTO05](https://github.com/VerdonTO05)** (Propietario)
+* **[ireneosuna](https://github.com/ireneosuna)** (Propietario)
+* **[AleejandroMontesinos](https://github.com/AleejandroMontesinos)** (Propietario)
+* 
