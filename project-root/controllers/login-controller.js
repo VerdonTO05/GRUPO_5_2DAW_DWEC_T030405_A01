@@ -1,13 +1,10 @@
-// ¡¡NO DEBE HABER NINGÚN 'import' AQUÍ ARRIBA!!
-
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.querySelector('.login-form');
 
-    // Cierro de la "x" (para ir a landing.html)
+    // Cierre de la "x" (para ir a landing.html)
     const closeBtn = document.querySelector('.close-btn');
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
-            // Ajusta esta ruta si 'landing.html' no está en el mismo directorio
             window.location.href = 'landing.html'; 
         });
     }
@@ -28,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 3. Obtenemos los usuarios desde localStorage
-        // Asumo que guardaste el array bajo la llave 'users'
         // localStorage solo guarda texto, así que convertimos el texto (JSON) a un array
         const usersJSON = localStorage.getItem('usuariosGuardados');
         const users = usersJSON ? JSON.parse(usersJSON) : []; // Si está vacío, usa un array vacío
@@ -42,13 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(`¡Bienvenido de nuevo, ${userFound.fullname}!`);
             console.log("Inicio de sesión exitoso:", userFound);
             
-            // ¡Importante! Guarda el usuario que ha iniciado sesión
-            // para usarlo en 'home.html'
             sessionStorage.setItem('currentUser', JSON.stringify(userFound));
 
             // Redirige a home.html
-            // (La ruta que tenías parece correcta si 'project-root' es la raíz del servidor)
-            window.location.href = "/project-root/public/views/home.html";
+            window.location.href = "../views/home.html";
 
         } else {
             alert("Usuario o contraseña incorrectos.");

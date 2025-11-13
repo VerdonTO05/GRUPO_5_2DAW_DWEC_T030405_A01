@@ -1,4 +1,3 @@
-// Este código se ejecuta cuando el HTML 'users.html' está listo
 document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Seleccionamos el <ul> donde pondremos la lista
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     } else {
-        // No se encontró la 'llave' en localStorage
+        // No se encontró la 'key' en localStorage
         listaUL.innerHTML = '<li>No hay usuarios registrados todavía.</li>';
     }
 });
