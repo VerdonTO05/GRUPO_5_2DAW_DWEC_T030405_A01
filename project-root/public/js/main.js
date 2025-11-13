@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isDark) {
             localStorage.setItem('dark-mode', 'true');
         } else {
-            localStorage.removeItem('dark-mode');
+            localStorage.setItem('dark-mode', 'false');
         }
     });
 });
