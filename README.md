@@ -4,15 +4,16 @@
 
 ## Descripción del Proyecto
 
-Este repositorio contiene un proyecto desarrollado como parte de la asignatura DWEC. El objetivo principal es aplicar y comprender la arquitectura de software **Modelo-Vista-Controlador (MVC)** en un entorno de desarrollo web front-end, utilizando tecnologías web estándar.
+Este repositorio contiene un proyecto desarrollado como parte de la asignatura DWEC. El objetivo principal es aplicar y comprender la arquitectura de software **Modelo-Vista-Controlador (MVC)** en un entorno de desarrollo web front-end, utilizando tecnologías web estándar. 
 
 ## 🚀 Tecnologías Utilizadas
 
-Este proyecto está construido exclusivamente con tecnologías front-end:
+Este proyecto está construido con tecnologías front-end:
 
-* **HTML5:** Para la estructura y el contenido semántico de la aplicación.
-* **CSS3:** Para el diseño, la presentación y los estilos visuales.
+* **HTML:** Para la estructura y el contenido semántico de la aplicación.
+* **CSS:** Para el diseño, la presentación y los estilos visuales.
 * **JavaScript (ES6+):** Para la lógica de la aplicación, la manipulación del DOM y la implementación del patrón MVC.
+* Tambien en JavaScript implementaremos funcionalidades como, guardar los usuarios registrados en el LocalStorage y demas
 
 ## 📂 Estructura del Proyecto
 
@@ -38,11 +39,10 @@ Dado que es un proyecto basado en HTML, CSS y JavaScript puros, no requiere un p
     cd GRUPO_5_2DAW_DWEC_T030405_A01
     ```
 
-3.  **Abre el archivo `index.html`** (probablemente ubicado dentro de la carpeta `project-root/`) directamente en tu navegador web preferido (como Chrome, Firefox o Edge).
+3.  **Abre el archivo `landing.html` directamente en tu navegador web preferido (como Chrome, Firefox o Edge).
 
-## 👥 Colaboradores
+## 👥 Propietarios
 
 * **[VerdonTO05](https://github.com/VerdonTO05)** (Propietario)
 * **[ireneosuna](https://github.com/ireneosuna)** (Propietario)
 * **[AleejandroMontesinos](https://github.com/AleejandroMontesinos)** (Propietario)
-* 
