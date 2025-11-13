@@ -1,5 +1,5 @@
 /* === LIGHT MODE === */
-.light-mode {
+:root {
   --bg-main: #ffffff;
   --bg-surface: #fef8f8;
   --bg-muted: #f3e9ea;

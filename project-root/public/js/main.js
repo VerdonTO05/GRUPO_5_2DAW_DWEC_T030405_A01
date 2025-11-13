@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleSwitch = document.getElementById('theme-toggle');
-    const darkModeEnabled = localStorage.getItem('dark-mode') === 'true';
+  const toggleSwitch = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+  const darkModeEnabled = localStorage.getItem('mode') === 'dark';
 
-    document.body.classList.toggle('dark-mode', darkModeEnabled);
-    toggleSwitch.checked = darkModeEnabled;
+  html.classList.toggle('dark-mode', darkModeEnabled);
+  html.classList.toggle('light-mode', !darkModeEnabled);
+  toggleSwitch.checked = darkModeEnabled;
 
-    toggleSwitch.addEventListener('change', () => {
-        const isDark = toggleSwitch.checked;
-        document.body.classList.toggle('dark-mode', isDark);
-
-        if (isDark) {
-            localStorage.setItem('dark-mode', 'true');
-            localStorage.setItem('light-mode','false');
-        } else {
-            localStorage.setItem('dark-mode', 'false');
-            localStorage.setItem('light-mode','true');
-        }
-    });
+  toggleSwitch.addEventListener('change', () => {
+    const isDark = toggleSwitch.checked;
+    html.classList.toggle('dark-mode', isDark);
+    html.classList.toggle('light-mode', !isDark);
+    localStorage.setItem('mode', isDark ? 'dark' : 'light');
+  });
 });
