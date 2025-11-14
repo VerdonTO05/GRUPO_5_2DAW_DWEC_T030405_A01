@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Por favor, introduce tu nombre completo (mínimo nombre y apellido).");
         return;
       }
-        
+
       if (username.length === 0) {
         alert("Por favor, introduce un nombre de usuario.");
         return;
@@ -88,8 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
       alert('¡Usuario "' + username + '" registrado con éxito!');
       registerForm.reset();
 
-      // 7. Redirigir (opcional, como en tu primer bloque)
-      // window.location.href = "home.html";
+      sessionStorage.setItem('currentUser', JSON.stringify(newUser)); //Hace el login directamente
+      // Redirige a home.html
+      window.location.href = "../views/home.html";
     });
   }
 });

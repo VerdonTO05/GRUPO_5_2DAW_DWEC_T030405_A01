@@ -1,0 +1,161 @@
+@import url(reset.css);
+@import url(colors.css);
+@import url(base.css);
+
+/* ===== CONTENEDOR GENERAL ===== */
+
+.how-it-works {
+    background-color: var(--bg-surface);
+    padding-bottom: 3rem;
+}
+
+/* ===== ENCABEZADO ===== */
+
+.hiw-header {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+}
+
+.hiw-header h1 {
+    font-size: 2.4rem;
+    color: var(--brand-primary);
+    font-weight: 700;
+}
+
+.hiw-header p {
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* ===== SELECTOR PARTICIPANTE / ORGANIZADOR ===== */
+
+.hiw-role-selector {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hiw-role-selector button {
+    padding: 0.8rem 1.4rem;
+    border-radius: 10px;
+    border: 1px solid var(--brand-primary);
+    background: var(--bg-surface);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--brand-primary);
+}
+
+.hiw-role-selector button.active {
+    background-color: var(--brand-primary);
+    color: var(--text-on-primary);
+}
+
+/* ===== INDICADORES DE PASOS ===== */
+
+.hiw-steps {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.step-number {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: var(--bg-muted);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.step-number.active {
+    background: var(--brand-primary);
+    color: var(--text-on-primary);
+}
+
+/* ===== TARJETA PRINCIPAL ===== */
+
+.hiw-card {
+    width: 80%;
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: var(--bg-main);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    border: 1px solid var(--border-color);
+}
+
+.hiw-card-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--bg-muted);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hiw-card-icon i {
+    font-size: 2rem;
+    color: var(--brand-primary);
+}
+
+.hiw-card h2 {
+    margin-top: 1rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.hiw-card .subtitle {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* ===== LISTA ===== */
+
+.hiw-list {
+    list-style: none;
+    padding-left: 0;
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.hiw-list li {
+    font-size: 1rem;
+}
+
+/* ===== BOTONES INFERIORES ===== */
+
+.hiw-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-secondary {
+    background: var(--bg-muted);
+    border: none;
+    padding: 0.8rem 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: var(--brand-primary);
+    border: none;
+    padding: 0.8rem 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--text-on-primary);
+    font-weight: 600;
+}
