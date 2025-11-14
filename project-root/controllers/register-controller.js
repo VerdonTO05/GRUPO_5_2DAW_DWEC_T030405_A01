@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
   const registerForm = document.querySelector(".register-form");
 
+    const closeBtn = document.querySelector('.close-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            window.location.href = 'landing.html'; 
+        });
+    }
+
   if (registerForm) {
     // --- FUNCIONES DE VALIDACIÓN ---
 
