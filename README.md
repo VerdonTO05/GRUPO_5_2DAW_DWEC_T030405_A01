@@ -38,8 +38,25 @@ Dado que es un proyecto basado en HTML, CSS y JavaScript puros, no requiere un p
     ```bash
     cd GRUPO_5_2DAW_DWEC_T030405_A01
     ```
-
+    Aquí tienes una representación visual de un repositorio siendo clonado y la navegación en la terminal: 
 3.  **Abre el archivo `landing.html` directamente en tu navegador web preferido (como Chrome, Firefox o Edge).
+
+## Imagenes
+**Landing Page**
+![Landing Page](https://sanishtech.com/i/691710ae932f54.56861729-1763119278.png)
+
+**Home**
+![Home Page](https://sanishtech.com/i/69171092745380.95049187-1763119250.png)
+
+**Login**
+![Login Page](https://sanishtech.com/i/6917107dc63f15.06150789-1763119229.png)
+
+**Register**
+![Register Page](https://sanishtech.com/i/6917106d137599.25551554-1763119213.png)
+
+**Ejemplo de modo oscuro**
+![Modo Oscuro](https://sanishtech.com/i/691710205b8124.65940507-1763119136.png)
+
 
 ## 👥 Propietarios
 
