@@ -13,7 +13,8 @@
 
 .hiw-header {
     text-align: center;
-    padding: 3rem 1rem 2rem;
+    margin-bottom: 0 !important;  
+    padding-bottom: 0 !important;
 }
 
 .hiw-header h1 {
@@ -33,7 +34,8 @@
 .hiw-steps {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    margin-bottom: 0 !important;  
+    padding-bottom: 0 !important;
 }
 
 .step-number {
@@ -57,14 +59,22 @@
 
 .hiw-card {
     width: 60%;
-    margin: 2rem auto;
-    border-radius: 20px;
+    margin: 0 auto;
+    padding: 0;           
+    background: none;    
+    border-radius: 0;  
+    border: none !important;   
 }
 
 .hiw-card-content {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    background: var(--bg-surface); 
+    border: 2px solid var(--brand-primary);  
+    border-radius: 20px;           
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
 }
 
 .hiw-card-content>div {
@@ -102,31 +112,31 @@
     display: flex;
     align-items: start;
     gap: 0.75rem;
+    padding-left: 7rem !important;
 }
 
 .tab-switch {
-    text-align: center;
     display: flex;
-    border-radius: 25px;
-    width: 50%;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
-    gap: 3rem;
+    gap: 1rem;                    
+    margin-top: 1rem;
 }
 
 .tab-btn {
     padding: 12px 18px;
-    width: 200px;
-    border: none;
-    border-radius: 20px;
-    background: none;
+    min-width: 180px;
     font-weight: bold;
-    font-size: 18px;
-    background-color: var(--bg-surface);
-    color: var(--text-secondary);
+    font-size: 16px;
+    border-radius: 16px;
+    background-color: var(--bg-muted) !important; 
+    border: 2px solid var(--brand-primary) !important;
+    color: var(--brand-primary) !important;
+    transition: 0.2s ease;
 }
 
 .tab-btn.active {
-    background-color: var(--brand-primary);
-    color: var(--text-primary);
+    background-color: var(--brand-primary) !important;
+    color: var(--bg-muted) !important;
+    border-color: var(--brand-primary) !important;
 }

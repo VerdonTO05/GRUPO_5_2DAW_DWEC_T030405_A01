@@ -6,7 +6,7 @@ const howHTML = `<main class="how-it-works">
             <p>Una plataforma simple e intuitiva para participar o crear actividades increíbles</p>
 
             <div class="tab-switch">
-                <button class="tab-btn" id="p">Soy Participante</button>
+                <button class="tab-btn active" id="p">Soy Participante</button>
                 <button class="tab-btn" id="o">Soy Organizador</button>
             </div>
         </section>
@@ -69,7 +69,6 @@ function renderStep(card, step) {
                         `).join("")}
                     </ul>
                 </div>
-
             </div>
         </div>
 
@@ -78,8 +77,6 @@ function renderStep(card, step) {
 
 
 }
-
-
 
 function activateHowItWorks() {
     const tabButtons = document.querySelectorAll(".tab-btn");

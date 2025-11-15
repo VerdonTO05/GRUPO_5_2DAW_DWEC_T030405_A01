@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     buttonExplore.addEventListener("click",()=>{
         if(!currentUser){
-            alert("Debes iniciar sesión para explorar actividades");
+            alert("Debes iniciar sesión o registrarte para explorar actividades");
             window.location.href="login.html";
         }
     });
