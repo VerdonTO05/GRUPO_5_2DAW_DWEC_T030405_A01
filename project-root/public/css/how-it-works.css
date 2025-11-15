@@ -28,34 +28,9 @@
     font-size: 1.1rem;
 }
 
-/* ===== SELECTOR PARTICIPANTE / ORGANIZADOR ===== */
-
-.hiw-role-selector {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.hiw-role-selector button {
-    padding: 0.8rem 1.4rem;
-    border-radius: 10px;
-    border: 1px solid var(--brand-primary);
-    background: var(--bg-surface);
-    cursor: pointer;
-    font-weight: 600;
-    color: var(--brand-primary);
-}
-
-.hiw-role-selector button.active {
-    background-color: var(--brand-primary);
-    color: var(--text-on-primary);
-}
-
 /* ===== INDICADORES DE PASOS ===== */
 
 .hiw-steps {
-    margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 3rem;
@@ -81,33 +56,25 @@
 /* ===== TARJETA PRINCIPAL ===== */
 
 .hiw-card {
-    width: 80%;
-    max-width: 900px;
+    width: 60%;
     margin: 2rem auto;
-    background-color: var(--bg-main);
     border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    border: 1px solid var(--border-color);
 }
 
-.hiw-card-icon {
-    width: 70px;
-    height: 70px;
-    background: var(--bg-muted);
-    border-radius: 12px;
+.hiw-card-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.hiw-card-icon i {
-    font-size: 2rem;
-    color: var(--brand-primary);
+.hiw-card-content>div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-wrap: wrap
 }
 
 .hiw-card h2 {
-    margin-top: 1rem;
     color: var(--text-primary);
     font-weight: 700;
 }
@@ -119,43 +86,47 @@
 
 /* ===== LISTA ===== */
 
-.hiw-list {
-    list-style: none;
-    padding-left: 0;
-    color: var(--text-primary);
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
+.hiw-list div {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background-color: var(--brand-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25rem;
 }
 
 .hiw-list li {
-    font-size: 1rem;
-}
-
-/* ===== BOTONES INFERIORES ===== */
-
-.hiw-buttons {
     display: flex;
+    align-items: start;
+    gap: 0.75rem;
+}
+
+.tab-switch {
+    text-align: center;
+    display: flex;
+    border-radius: 25px;
+    width: 50%;
     justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+    align-items: center;
+    gap: 3rem;
 }
 
-.btn-secondary {
-    background: var(--bg-muted);
+.tab-btn {
+    padding: 12px 18px;
+    width: 200px;
     border: none;
-    padding: 0.8rem 1.3rem;
-    border-radius: 10px;
-    cursor: pointer;
+    border-radius: 20px;
+    background: none;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: var(--bg-surface);
+    color: var(--text-secondary);
+}
+
+.tab-btn.active {
+    background-color: var(--brand-primary);
     color: var(--text-primary);
-    font-weight: 600;
-}
-
-.btn-primary {
-    background: var(--brand-primary);
-    border: none;
-    padding: 0.8rem 1.3rem;
-    border-radius: 10px;
-    cursor: pointer;
-    color: var(--text-on-primary);
-    font-weight: 600;
 }

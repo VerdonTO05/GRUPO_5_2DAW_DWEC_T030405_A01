@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const currentUser = sessionStorage.getItem('currentUser');
     const buttonExplore = document.getElementById("button-explore");
     const buttonPost = document.getElementById("button-post");
+    
 
     if (currentUser) {
         //Se añade el enlace a home en el header de la página
@@ -30,6 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Pulsando este botón se abrirá un formulario con el que podrán crear actividades.");
         alert("La funcionalidad 'Publicar Actividad' está en desarrollo");
     });
+
+    
+
+    
+
+
 
 
 });

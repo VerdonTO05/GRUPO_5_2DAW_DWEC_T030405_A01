@@ -8,7 +8,7 @@ const headerHTML = `<header>
         </div>
         <ul id="list">
             <li><a href="landing.html">Inicio</a></li>
-            <li><a href="#">Cómo Funciona</a></li>
+            <li id="how"><a href="#">Cómo Funciona</a></li>
         </ul>
         <div class="icons">
             <label class="switch">
@@ -65,10 +65,6 @@ const footerHTML = `<footer>
 </footer>`;
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Clonar y añadir header y footer
-    const header = document.getElementById('header');
-    const footer = document.getElementById('footer');
-
     document.getElementById('header').innerHTML = headerHTML;
     document.getElementById('footer').innerHTML = footerHTML;
 });
