@@ -1,4 +1,4 @@
-/* === LOGO === */
+/* Logo */
 .logo-container a {
   display: flex;
   align-items: center;
@@ -17,7 +17,7 @@
   color: var(--brand-primary);
 }
 
-/* === HERO === */
+/* Main */
 main{
   background-color: var(--bg-surface);
 }
@@ -71,6 +71,8 @@ main section:first-of-type button:hover {
   opacity: 0.9;
 }
 
+/* Visualización slogan */
+
 .slogan {
   display: inline-flex;
   align-items: center;
@@ -105,7 +107,7 @@ main section:first-of-type button:hover {
   color: var(--text-primary);
 }
 
-/* === BENEFITS CARDS === */
+/* Cards */
 main section:nth-of-type(2) {
   display: flex;
   justify-content: center;
@@ -129,7 +131,7 @@ main section:nth-of-type(2) h3 {
   margin-bottom: 0.5rem;
 }
 
-/* === STATS === */
+/* Estadísticas */
 main section:nth-of-type(3) {
   display: flex;
   justify-content: center;
@@ -153,7 +155,7 @@ main section:nth-of-type(3) p {
   color: var(--brand-primary);
 }
 
-/* === ICONS === */
+/* Iconos */
 .icons {
   display: flex;
   align-items: center;
@@ -174,7 +176,7 @@ main section:nth-of-type(3) p {
   color: var(--text-secondary);
 }
 
-/* === BUTTONS === */
+/* Botones */
 .btn-post {
   background-color: var(--brand-primary);
   color: var(--text-on-primary);
@@ -185,7 +187,7 @@ main section:nth-of-type(3) p {
   font-weight: 600;
 }
 
-/* === FEATURES === */
+/* Caracteristicas */
 .features {
   display: flex;
   justify-content: center;
@@ -232,7 +234,7 @@ main section:nth-of-type(3) p {
   line-height: 1.4;
 }
 
-/* === FILTERS === */
+/* Filtros */
 .filters {
   display: flex;
   flex-wrap: wrap;
@@ -271,7 +273,7 @@ main section:nth-of-type(3) p {
   font-weight: 500;
 }
 
-/* === ACTIVITIES GRID === */
+/* Actividades */
 .grid-activities {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -280,7 +282,7 @@ main section:nth-of-type(3) p {
   justify-items: center;
 }
 
-/* === ACTIVITY CARD === */
+/* Actividad */
 .activity {
   background-color: var(--bg-surface);
   border-radius: 20px;
@@ -299,7 +301,7 @@ main section:nth-of-type(3) p {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* === IMAGE === */
+/* Imagenes actividades */
 .activity-image {
   position: relative;
   height: 200px;
@@ -331,7 +333,7 @@ main section:nth-of-type(3) p {
   background-color: var(--accent-purple);
 }
 
-/* === CONTENT === */
+/* Contenido actividad */
 .activity-content {
   padding: 1.2rem;
   display: flex;
@@ -364,7 +366,7 @@ main section:nth-of-type(3) p {
   margin-bottom: 0.25rem;
 }
 
-/* === PRICE & BUTTONS === */
+/* Elementos actividad */
 .price {
   font-size: 1.25rem;
   font-weight: 700;
@@ -394,6 +396,7 @@ main section:nth-of-type(3) p {
   color: var(--text-secondary);
 }
 
+/* Boton prueba ver usuarios */
 #btn_users {
   background-color: var(--brand-primary);
   color: var(--text-on-primary);
@@ -406,7 +409,7 @@ main section:nth-of-type(3) p {
   margin-bottom: 1rem;
 }
 
-/* === THEME SWITCH === */
+/* Switch del tema */
 .switch {
   position: relative;
   display: inline-block;

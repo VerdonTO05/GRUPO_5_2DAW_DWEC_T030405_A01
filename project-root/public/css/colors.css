@@ -1,4 +1,4 @@
-/* === LIGHT MODE === */
+/* Light mode */
 :root {
   --bg-main: #ffffff;
   --bg-surface: #fef8f8;
@@ -13,7 +13,7 @@
   --border-color: #e0e0e0;
 }
 
-/* === DARK MODE === */
+/* Dark mode */
 .dark-mode {
   --bg-main: #1a1214;
   --bg-surface: #291b1e;

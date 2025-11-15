@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - MOVEos</title>
+    <!-- Archivos necesarios -->
     <script src="../js/theme-init.js"></script>
     <script src="../js/main.js"></script>
     <link rel="stylesheet" href="../css/forms.css">
@@ -14,15 +15,16 @@
 </head>
 
 <body>
+    <!-- Switch del tema -->
     <div class="icons">
         <label class="switch">
             <input type="checkbox" id="theme-toggle">
             <span class="slider"></span>
         </label>
     </div>
+    <!-- Contenedor principal -->
     <div class="container">
         <button class="close-btn">&times;</button>
-        <!-- al pulsar la x que se abra el landing.html (hacer en js) -->
         <header class="header">
             <h1>BIENVENIDO a MOVEos</h1>
             <p>Inicia sesión para continuar tu aventura</p>
@@ -35,6 +37,7 @@
             </a>
         </div>
 
+        <!-- Formulario -->
         <form id="login-form" method="POST" class="login-form">
 
             <label for="username">Nombre de Usuario</label>

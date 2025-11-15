@@ -2,14 +2,14 @@
 @import url(colors.css);
 @import url(base.css);
 
-/* ===== CONTENEDOR GENERAL ===== */
+/* Contenedor base */
 
 .how-it-works {
     background-color: var(--bg-surface);
     padding-bottom: 3rem;
 }
 
-/* ===== ENCABEZADO ===== */
+/* Encabezado */
 
 .hiw-header {
     text-align: center;
@@ -29,7 +29,7 @@
     font-size: 1.1rem;
 }
 
-/* ===== INDICADORES DE PASOS ===== */
+/* Indicadores de paso */
 
 .hiw-steps {
     display: flex;
@@ -55,7 +55,7 @@
     color: var(--text-on-primary);
 }
 
-/* ===== TARJETA PRINCIPAL ===== */
+/* Tarjeta principal */
 
 .hiw-card {
     width: 60%;
@@ -94,7 +94,7 @@
     margin-bottom: 1.5rem;
 }
 
-/* ===== LISTA ===== */
+/* Lista */
 
 .hiw-list div {
     flex-shrink: 0;
@@ -114,6 +114,8 @@
     gap: 0.75rem;
     padding-left: 7rem !important;
 }
+
+/* Botones participante / ofertante */
 
 .tab-switch {
     display: flex;

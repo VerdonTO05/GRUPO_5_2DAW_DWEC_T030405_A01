@@ -1,3 +1,4 @@
+/** main.js que controla el tema de la página (claro u oscuro), ya que en todas las ventanas se podrá realizar*/
 document.addEventListener('DOMContentLoaded', () => {
   const toggleSwitch = document.getElementById('theme-toggle');
   const html = document.documentElement;

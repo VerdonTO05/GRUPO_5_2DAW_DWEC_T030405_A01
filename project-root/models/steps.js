@@ -1,3 +1,4 @@
+/** Crea la información del tutorial para participantes y ofertantes (icono no usado por ahora) */
 const stepsParticipante = [
     {
         icon: "fas fa-search",

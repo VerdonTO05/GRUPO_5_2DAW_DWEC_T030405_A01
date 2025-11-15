@@ -1,3 +1,4 @@
+@import url(reset.css);
 @import url(colors.css);
 @import url(theme.css);
 
@@ -87,6 +88,7 @@ label {
     color: var(--text-primary);
 }
 
+/* Visualización de los campos del formulario */
 .input-group {
     display: flex;
     align-items: center;
@@ -100,8 +102,7 @@ label {
 }
 
 .input-group:focus-within {
-    border-color: var(--brand-primary);
-    /* Resaltar al enfocar */
+    border-color: var(--brand-primary); /* Resaltar al enfocar */
 }
 
 .input-group input {
@@ -131,6 +132,18 @@ input[type="email"]{
     color: var(--text-secondary);
 }
 
+/* Eliminar fondo blanco del autocompletado */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--bg-main) inset !important;
+    box-shadow: 0 0 0 1000px var(--bg-main) inset !important;
+    -webkit-text-fill-color: var(--text-secondary) !important;
+    caret-color: var(--text-primary);
+    transition: background-color 9999s ease-in-out 0s;
+}
+
 /* Placeholder (texto "tu_usuario") */
 ::placeholder {
     color: var(--text-secondary);
@@ -153,11 +166,12 @@ input[type="email"]{
     text-decoration: underline;
 }
 
+/* Botón enviar formulario */
 .submit-btn {
     width: 100%;
     padding: 17px;
     background-color: var(--brand-primary);
-    color: white;
+    color: var(--bg-surface);
     border: none;
     border-radius: 10px;
     font-size: 18px;
@@ -167,16 +181,7 @@ input[type="email"]{
     margin-top: 10px;
 }
 
-/* Responsive para pantallas pequeñas */
-@media (max-width: 480px) {
-    .container {
-        max-width: 90%;
-        transform: scale(1);
-        padding: 35px 25px;
-    }
-}
-
-/* === INTERRUPTOR DE TEMA === */
+/* Interruptor de tema */
 .switch {
   position: absolute;
   top: 20px;
@@ -185,7 +190,7 @@ input[type="email"]{
   height: 26px;
 }
 
-/*Por cambiar*/
+/* Vista para usuarios existentes en LocalStorage*/
 .user-list {
     list-style: none;
     padding: 0;
@@ -202,4 +207,12 @@ input[type="email"]{
     transition: background-color 0.3s;
 }
 
+/* Responsive para pantallas pequeñas */
+@media (max-width: 480px) {
+    .container {
+        max-width: 90%;
+        transform: scale(1);
+        padding: 25px 18px;  
+    }
+}
 

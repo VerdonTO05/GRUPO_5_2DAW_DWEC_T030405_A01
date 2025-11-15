@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // Si está logueado, muestra Explorar actividades en el header de la pagina 
   if (currentUser) {
     const ul = document.getElementById("list");
 

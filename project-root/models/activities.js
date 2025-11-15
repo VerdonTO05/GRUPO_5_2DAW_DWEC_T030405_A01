@@ -1,3 +1,4 @@
+/** Crea actividades con datos */
 document.addEventListener("DOMContentLoaded", () => {
   const activitiesData = [
     {

@@ -1,3 +1,4 @@
+/* Se crea el footer y header para añadirlo a todas las ventanas necesarios y evitar duplicar código  */
 const headerHTML = `<header>
     <nav>
         <div class="logo-container">

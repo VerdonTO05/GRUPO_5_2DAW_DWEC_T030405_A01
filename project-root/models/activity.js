@@ -1,3 +1,4 @@
+/** Clase Actividad donde se cuarda la información  */
 class Activity {
   constructor({ title, description, image, alt, label, labelClass, details, price }) {
     this.title = title;

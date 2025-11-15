@@ -1,4 +1,4 @@
-/* === BASE BODY === */
+/* Base body */
 body {
   font-family: "Inter", Arial, sans-serif;
   background-color: var(--bg-main);
@@ -6,7 +6,7 @@ body {
   line-height: 1.6;
 }
 
-/* === HEADER === */
+/* Header */
 header {
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
@@ -51,7 +51,7 @@ nav div button:last-child {
   color: var(--text-on-primary);
 }
 
-/* === FOOTER === */
+/* Footer */
 footer {
   background: var(--bg-surface);
   padding: 3rem 2rem 1rem;

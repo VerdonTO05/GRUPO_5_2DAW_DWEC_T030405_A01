@@ -1,3 +1,4 @@
+/** Html del tutorial que se añadirá al pulsar 'Cómo Funciona' */
 const howHTML = `<main class="how-it-works">
 
         <!-- ENCABEZADO -->
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-
+/** Funcion que  renderiza el contenido de tutorial */ 
 function renderStep(card, step) {
 
     card.innerHTML = `
@@ -78,6 +79,9 @@ function renderStep(card, step) {
 
 }
 
+/**
+ * Función que activa los botones para modificar su visualización, además del contenido que se muestra
+ */
 function activateHowItWorks() {
     const tabButtons = document.querySelectorAll(".tab-btn");
     const stepButtons = document.querySelectorAll(".step-number");
