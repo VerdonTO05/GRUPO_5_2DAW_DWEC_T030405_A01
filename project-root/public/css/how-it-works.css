@@ -98,8 +98,8 @@
 
 .hiw-list div {
     flex-shrink: 0;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     background-color: var(--brand-primary);
     border-radius: 50%;
     display: flex;
@@ -112,7 +112,6 @@
     display: flex;
     align-items: start;
     gap: 0.75rem;
-    padding-left: 7rem !important;
 }
 
 /* Botones participante / ofertante */
