@@ -14,7 +14,8 @@ Este proyecto está construido con tecnologías front-end:
 * **HTML:** Para la estructura y el contenido semántico de la aplicación.
 * **CSS:** Para el diseño, la presentación y los estilos visuales.
 * **JavaScript (ES6+):** Para la lógica de la aplicación, la manipulación del DOM y la implementación del patrón MVC.
-* Tambien en JavaScript implementaremos funcionalidades como, guardar los usuarios registrados en el LocalStorage y demas
+* Tambien en JavaScript implementaremos funcionalidades como, guardar los usuarios registrados en el LocalStorage y arrays para la persistencia de datos.
+* Con LocalStorage tambien almacenamos el modo de vista de la página (Claro u oscuro).
 
 ## 📂 Estructura del Proyecto
 
@@ -42,8 +43,16 @@ Dado que es un proyecto basado en HTML, CSS y JavaScript puros, no requiere un p
     Aquí tienes una representación visual de un repositorio siendo clonado y la navegación en la terminal: 
 3.  **Abre el archivo `landing.html` directamente en tu navegador web preferido (como Chrome, Firefox o Edge).
 
+## Utilización ✍️
+Nuestra plataforma web requiere registro e inicio de sesión para acceder a la página principal (Home). Este acceso protegido se verifica usando una variable en sessionStorage.
+
+En el Home, las actividades se generan dinámicamente, ya que cada una es una instancia de una clase, permitiendo añadirlas en tiempo real, en un futuro se seguira implementando de esa manera.
+
+La web también incluye una sección "Cómo funciona" (para roles de Organizador y Participante) y guarda la preferencia del tema (claro/oscuro) en localStorage para mantener la elección del usuario.
+    
+    
 ## Imagenes
-**https://imgur.com/gallery/grupo-5-imagenes-v1-2-MWRxqFm**
+**https://imgur.com/gallery/imagenes-grupo-5-v1-3-92sLKTH**
 
 
 ## 👥 Propietarios
