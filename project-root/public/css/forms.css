@@ -149,23 +149,6 @@ input:-webkit-autofill:active {
     color: var(--text-secondary);
 }
 
-/* Enlace "¿Olvidaste tu contraseña?" */
-.forgot-password {
-    display: block;
-    text-align: left;
-    color: var(--brand-primary);
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 25px;
-    transition: color 0.2s;
-}
-
-.forgot-password:hover {
-    text-decoration: underline;
-}
-
 /* Botón enviar formulario */
 .submit-btn {
     width: 100%;
@@ -186,8 +169,6 @@ input:-webkit-autofill:active {
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 50px;
-  height: 26px;
 }
 
 /* Vista para usuarios existentes en LocalStorage*/
@@ -213,6 +194,10 @@ input:-webkit-autofill:active {
         max-width: 90%;
         transform: scale(1);
         padding: 25px 18px;  
+    }
+
+    .user-type-group {
+        flex-direction: column;
     }
 }
 

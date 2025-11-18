@@ -100,3 +100,97 @@ footer p {
   border-top: 1px solid var(--border-color);
   padding-top: 1rem;
 }
+
+/*Iconos*/
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.8em;
+}
+
+.icons i {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 1em;
+  border-radius: 6px;
+}
+
+.icons i:hover {
+  background-color: var(--bg-muted);
+  color: var(--text-secondary);
+}
+
+/* Logo */
+.logo-container a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-container img {
+  height: 40px;
+  width: auto;
+  margin-right: 8px;
+}
+
+.logo-container span {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+}
+
+/* Main */
+main {
+  background-color: var(--bg-surface);
+}
+
+main section:first-of-type {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+}
+
+main section:first-of-type p:first-child {
+  color: var(--brand-primary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+main section:first-of-type h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--brand-dark);
+}
+
+main section:first-of-type p:nth-of-type(2) {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: var(--brand-primary);
+}
+
+main section:first-of-type div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+main section:first-of-type button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--brand-primary);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+main section:first-of-type button:first-child {
+  background: var(--brand-primary);
+  color: var(--text-on-primary);
+}
+
+main section:first-of-type button:hover {
+  opacity: 0.9;
+}
